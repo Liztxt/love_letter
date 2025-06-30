@@ -1,0 +1,162 @@
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@400;600&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, #ffe4e1, #fff);
+    color: #5a4b44;
+    padding: 3em;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.carta {
+    background-color: #ffffffdd;
+    border-radius: 16px;
+    padding: 2em 2.5em;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffb6c1;
+    animation: slideUp 1.5s ease-out;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    color: #d6336c;
+    animation: typing 4s steps(30, end) 1, blink .75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #d6336c;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+    margin-top: 1em;
+}
+
+.firma {
+    text-align: right;
+    margin-top: 2em;
+    font-style: italic;
+    color: #b03060;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+/* Contenedor de corazones */
+.heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Corazones individuales */
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d6d;
+    transform: rotate(45deg);
+    animation: float 5s ease-in infinite;
+    opacity: 0.7;
+}
+
+/* Parte redonda del corazón */
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d6d;
+    border-radius: 50%;
+}
+
+/* Ubicar correctamente los círculos */
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: -10px;
+    top: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100%) scale(1) rotate(45deg);
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200%) scale(1.5) rotate(45deg);
+        opacity: 0;
+    }
+}
+.carta {
+    position: relative;
+    z-index: 1;
+    /* ... resto de estilos */
+}
+.foto-final {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.foto-final img {
+    width: 250px;
+    height: auto;
+    border: 6px solid #ffc0cb;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+}
+
+.foto-final img:hover {
+    transform: scale(1.05);
+}
+.boton-musica {
+    display: block;
+    margin: 2em auto 0;
+    padding: 0.8em 2em;
+    background-color: #ff7f9a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 127, 154, 0.6);
+    transition: background-color 0.3s ease;
+  }
+  .boton-musica:hover {
+    background-color: #ff4d75;
+  }

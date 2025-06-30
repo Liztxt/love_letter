@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Te amo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+<body>
+    <div class="carta">
+        <h1>Para el amor de mi vida</h1>
+        <p>Feliz cumpleaños amor!!! Te hago esta carta desde el fondo del corazón para decirte que te amo, te amo tanto que faltan palabras para expresarlo.
+            <br>Y solo quiero decirte gracias. Gracias por existir, por tu compañia que me calma, por tu forma de abrazarme de quererme y estar para mi, por tus ocurrencias, tu paciencia y por todo lo que eres.
+            <br><br>
+            En este cumpleaños quiero desearte no solo felicidad, sino también que puedas cumplir todos tus sueños, deseo ser quien te acompañe y te ayude a lograrlos.
+            <br><br>
+            Amarte ha sido lo mejor que me han pasado. Lo eres todo para mi, y espero ser todo para ti. <br>Me emociona imaginar todo lo que todavía nos espera.
+            Estoy feliz de poder acompañarte en este dia, de poder decirte "feliz cumpleaños, amor mío". Espero hacerte igual de feliz a ti,no hay manera en la que deje de pensar en ti, en la que deje de desearte, te amo muchísimo que no basta con solo decirlo.
+            <br><br>
+            Te amo, te amo, te amo.
+
+Siempre tuya,
+        </p>
+        <p>Con amor,<br>Lis</p>
+    </div>
+    <div class="foto-final">
+    <img src="nosotros.jpg" alt="Nosotros ❤️">
+</div>
+<audio id="miAudio" loop>
+  <source src="Juanes - Es Por Ti.mp3" type="audio/mpeg" />
+  Tu navegador no soporta audio.
+</audio>
+
+<button id="btnPlay" onclick="playAudio()" class="boton-musica">
+  🎵 Escuchar música de fondo
+</button>
+
+<script>
+  function playAudio() {
+    const audio = document.getElementById('miAudio');
+    audio.play();
+    document.getElementById('btnPlay').style.display = 'none';
+  }
+</script>
+</body>
+<div class="heart-container">
+    <!-- Puedes duplicar o cambiar las posiciones -->
+    <div class="heart" style="left: 20%; animation-delay: 0s;"></div>
+    <div class="heart" style="left: 40%; animation-delay: 1s;"></div>
+    <div class="heart" style="left: 60%; animation-delay: 2s;"></div>
+    <div class="heart" style="left: 30%; animation-delay: 1.5s;"></div>
+    <div class="heart" style="left: 50%; animation-delay: 2.5s;"></div>
+    <div class="heart" style="left: 70%; animation-delay: 3s;"></div>
+</div>
+
+</html>
